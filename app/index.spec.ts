@@ -1,4 +1,4 @@
-import A from './';
+import A from './index.js';
 import anyTest, { TestFn } from 'ava';
 
 const test = anyTest as TestFn<{ cwd: string }>;

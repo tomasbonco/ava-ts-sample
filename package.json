@@ -2,6 +2,7 @@
 	"name": "ava-ts-sample",
 	"version": "1.0.0",
 	"description": "",
+	"type": "module",
 	"scripts": {
 		"test": "ava"
 	},
@@ -11,12 +12,11 @@
 		"typescript": "^4.6.4"
 	},
 	"ava": {
-		"compileEnhancements": false,
-		"extensions": [
-			"ts"
-		],
-		"require": [
-			"ts-node/register"
+		"extensions": {
+			"ts": "module"
+		},
+		"nodeArguments": [
+			"--loader=ts-node/esm"
 		]
 	}
 }
